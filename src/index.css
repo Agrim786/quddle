@@ -97,7 +97,7 @@ body::-webkit-scrollbar {
     @apply bg-[#000] text-white min-h-dvh overflow-hidden flex justify-center items-center relative z-20;
 
     .msg-wrapper {
-      @apply 2xl:text-[8.5rem] md:text-5xl text-2xl font-bold uppercase leading-[9vw] tracking-[-.35vw] flex flex-col justify-center items-center md:gap-24 gap-14;
+      @apply 2xl:text-[8.5rem] md:text-8xl text-5xl font-bold uppercase leading-[9vw] tracking-[-.35vw] flex flex-col justify-center items-center md:gap-24 gap-14;
 
       h1:first-of-type {
         @apply 2xl:max-w-4xl md:max-w-2xl max-w-xs text-center  text-[#faeade10];
@@ -122,10 +122,6 @@ body::-webkit-scrollbar {
     }
   }
 
-  .message-content .msg-wrapper h1 {
-    transform: scale(0.85);
-    transform-origin: center;
-  }
   .testimonials-section {
     @apply bg-[#000] relative w-full h-[120dvh];
 
