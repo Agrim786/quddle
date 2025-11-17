@@ -79,7 +79,7 @@ const HeroSection = () => {
           </>
         ) : (
           <video
-            src="/videos/hero-bg5.mp4"
+            src="/videos/hero-bg5.webm"
             autoPlay
             muted
             playsInline
