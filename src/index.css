@@ -122,6 +122,12 @@ body::-webkit-scrollbar {
     }
   }
 
+  .message-content .msg-wrapper h1 {
+  transform: scale(0.78);
+  transform-origin: center;
+}
+
+
   .testimonials-section {
     @apply bg-[#000] relative w-full h-[120dvh];
 
@@ -135,74 +141,6 @@ body::-webkit-scrollbar {
 
     h1 {
       @apply uppercase text-[20.5vw] leading-[105%] tracking-[-.4vw] ml-[2vw] font-bold text-white;
-    }
-  }
-
-  .flavor-section {
-    @apply min-h-dvh bg-[#000];
-
-    .flavor-text-scroll {
-      @apply rotate-[-3deg] md:translate-y-5 border-[.5vw] border-milk absolute z-10;
-    }
-
-    .first-text-split h1 {
-      @apply md:text-center text-white;
-    }
-
-    .second-text-split h1 {
-      @apply md:text-center text-white;
-    }
-
-    .slider-wrapper {
-      @apply lg:h-dvh min-h-dvh md:min-h-fit w-full mt-0 md:mt-20 xl:mt-0 bg-[#000];
-
-      .flavors {
-        @apply h-full w-full flex md:flex-row flex-col items-center 2xl:gap-72 lg:gap-52 md:gap-24 gap-7 flex-nowrap;
-
-        .drinks {
-          @apply absolute left-1/2 -translate-x-1/2 bottom-0 md:h-full h-80;
-        }
-
-        .elements {
-          @apply absolute md:top-0 md:bottom-auto bottom-10 w-full;
-        }
-
-        h1 {
-          @apply absolute md:bottom-10 md:left-10 bottom-5 left-5 text-milk md:text-6xl text-3xl font-semibold uppercase tracking-tighter;
-        }
-      }
-    }
-  }
-
-  .nutrition-section {
-    @apply min-h-dvh 2xl:h-[120dvh] overflow-hidden relative;
-
-    .big-img {
-      @apply w-full absolute 2xl:h-full md:h-2/3 h-1/2 left-0 bottom-0 object-bottom 2xl:object-contain object-cover;
-    }
-
-    .nutrition-title {
-      @apply 2xl:max-w-4xl xl:max-w-2xl md:py-0 py-3 md:pb-5 pb-0 lg:pb-0 md:text-center text-[#513022];
-    }
-
-    .nutrition-text-scroll {
-      @apply rotate-[-3deg] border-[.5vw] border-[#e3d3bc] text-nowrap opacity-0 md:-mt-32 -mt-24;
-    }
-
-    .nutrition-box {
-      @apply absolute md:bottom-16 bottom-5 w-full md:px-0 px-5;
-
-      .list-wrapper {
-        @apply bg-[#fdebd2] rounded-full border-[.5vw] border-[#e8ddca] mx-auto max-w-7xl md:py-8 py-5 md:px-0 px-5 flex justify-between items-center;
-
-        p {
-          @apply text-[#865720];
-        }
-      }
-
-      .spacer-border {
-        @apply absolute right-0 top-1/2 transform -translate-y-1/2 md:h-24 h-16 w-px bg-[#C89C6E];
-      }
     }
   }
 
