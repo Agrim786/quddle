@@ -21,10 +21,10 @@ const App = () => {
 
   return (
     <main>
-     
+
+      <NavBar />
       <div id="smooth-wrapper">
         <div id="smooth-content">
-           <NavBar />
           <HeroSection />
           <MessageSection />
           <DownloadSection />
@@ -32,7 +32,7 @@ const App = () => {
           </div>
           <BenefitSection />
           <TestimonialSection />
-          <FooterSection /> 
+          <FooterSection />
         </div>
       </div>
     </main>
