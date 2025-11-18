@@ -55,7 +55,7 @@ const BenefitSection = () => {
             <ClipPathTitle
               title={"Smart Shopping"}
               color={"#faeade"}
-              bg={"#e74b3dff"}
+              bg={"#dd8f2fff"}
               className={"first-title"}
               borderColor={"#222123"}
             />
@@ -69,14 +69,14 @@ const BenefitSection = () => {
             <ClipPathTitle
               title={"Instant Rewards"}
               color={"#faeade"}
-              bg={"#aa30c3ff"}
+              bg={"#773fbbff"}
               className={"third-title"}
               borderColor={"#222123"}
             />
             <ClipPathTitle
               title={"Friction Free"}
-              color={"#2E2D2F"}
-              bg={"#FED775"}
+              color={"#ffffffff"}
+              bg={"#8fa34bff"}
               className={"fourth-title"}
               borderColor={"#222123"}
             />
