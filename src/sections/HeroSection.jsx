@@ -79,7 +79,7 @@ const HeroSection = () => {
           </>
         ) : (
           <video
-            src="/videos/hero-bg5.webm"
+            src="/videos/hero-bg6.webm"
             autoPlay
             muted
             playsInline
@@ -97,7 +97,7 @@ const HeroSection = () => {
             className="hero-text-scroll"
           >
             <div className="hero-subtitle">
-              <h1>Quddle AI </h1>
+              <h1>Quddle.AI </h1>
             </div>
           </div>
 
@@ -105,6 +105,11 @@ const HeroSection = () => {
             Discover more, spend smarter, and turn everyday shopping into something extraordinary, only on Quddle.ai.
           </h2>
         </div>
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce z-30">
+        <div className="w-6 h-10 border-2 border-black rounded-full flex justify-center">
+          <div className="w-1 h-3 bg-black rounded-full mt-2 animate-pulse" />
+        </div>
+      </div>
       </div>
     </section>
   );

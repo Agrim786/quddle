@@ -33,7 +33,7 @@ const FooterSection = () => {
           <div className="flex items-center gap-10">
             {/* Users */}
             <div className="flex flex-col items-center">
-              <p className="text-4xl font-semibold">1+</p>
+              <p className="text-4xl font-semibold">0</p>
               <span className="text-sm text-white/60">Users</span>
             </div>
 
@@ -41,7 +41,7 @@ const FooterSection = () => {
 
             {/* Advertisers */}
             <div className="flex flex-col items-center">
-              <p className="text-4xl font-semibold">5+</p>
+              <p className="text-4xl font-semibold">0</p>
               <span className="text-sm text-white/60">Advertisers</span>
             </div>
 
@@ -49,7 +49,7 @@ const FooterSection = () => {
 
             {/* Sellers */}
             <div className="flex flex-col items-center">
-              <p className="text-4xl font-semibold">7+</p>
+              <p className="text-4xl font-semibold">0</p>
               <span className="text-sm text-white/60">Sellers</span>
             </div>
 

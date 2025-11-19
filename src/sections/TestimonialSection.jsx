@@ -50,7 +50,7 @@ const TestimonialSection = () => {
     <section className="testimonials-section">
       <div className="absolute size-full flex flex-col items-center pt-[7vw]">
         <h1 className="text-white first-title">Shop</h1>
-        <h1 className="text-[yellow] sec-title">Smarter</h1>
+        <h1 className="text-[#773fbbff] sec-title">Smarter</h1>
       </div>
 
       <div className="pin-box">
