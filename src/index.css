@@ -131,16 +131,16 @@ body::-webkit-scrollbar {
     @apply bg-[#000] relative w-full h-[120dvh];
 
     .pin-box {
-      @apply flex items-center justify-center w-full ps-50 absolute 2xl:bottom-32 bottom-20 md:bottom-32
+      @apply flex items-center justify-center w-full ps-16 absolute 2xl:bottom-32 bottom-20 md:bottom-32
 ;
 
       .vd-card {
-        @apply md:w-90 w-84 flex-none md:rounded-[3vw] rounded-3xl -ms-42 overflow-hidden 2xl:relative  border-[.5vw] border-white;
+        @apply md:w-70 w-64 flex-none md:rounded-[3vw] rounded-3xl -ms-26 overflow-hidden 2xl:relative  border-[.5vw] border-white;
       }
     }
 
     h1 {
-      @apply uppercase text-[14.5vw] leading-[105%] tracking-[-.4vw] ml-[5vw] font-bold text-white;
+      @apply uppercase text-[9.5vw] leading-[105%] tracking-[-.1vw] ml-[20vw] translate-y-[13vh]  font-bold text-white;
     }
   }
   
