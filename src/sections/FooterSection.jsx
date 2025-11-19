@@ -5,10 +5,11 @@ const FooterSection = () => {
     <footer className="w-full bg-[#000000] text-white py-12 px-6 md:px-20">
 
       {/* MAIN FLEX — LEFT | CENTER NUMBERS | RIGHT */}
-      <div className="flex items-center justify-between w-full gap-6">
+      {/* MAIN FLEX — LEFT | CENTER NUMBERS | RIGHT */}
+      <div className="flex flex-col md:flex-row items-center md:justify-between w-full gap-10 md:gap-6">
 
         {/* LEFT SIDE */}
-        <div className="flex flex-col gap-2 shrink-0">
+        <div className="flex flex-col items-center md:items-start gap-2 shrink-0 text-center md:text-left">
 
           {/* LOGO + NAME SIDE-BY-SIDE */}
           <div className="flex items-center gap-3">
@@ -30,10 +31,10 @@ const FooterSection = () => {
         {/* CENTER NUMBERS */}
         <div className="flex flex-col items-center gap-3 flex-1">
 
-          <div className="flex items-center gap-10">
+          <div className="flex items-center gap-6 md:gap-10">
             {/* Users */}
             <div className="flex flex-col items-center">
-              <p className="text-4xl font-semibold">0</p>
+              <p className="text-3xl md:text-4xl font-semibold">0</p>
               <span className="text-sm text-white/60">Users</span>
             </div>
 
@@ -41,7 +42,7 @@ const FooterSection = () => {
 
             {/* Advertisers */}
             <div className="flex flex-col items-center">
-              <p className="text-4xl font-semibold">0</p>
+              <p className="text-3xl md:text-4xl font-semibold">0</p>
               <span className="text-sm text-white/60">Advertisers</span>
             </div>
 
@@ -49,7 +50,7 @@ const FooterSection = () => {
 
             {/* Sellers */}
             <div className="flex flex-col items-center">
-              <p className="text-4xl font-semibold">0</p>
+              <p className="text-3xl md:text-4xl font-semibold">0</p>
               <span className="text-sm text-white/60">Sellers</span>
             </div>
 
@@ -58,7 +59,7 @@ const FooterSection = () => {
         </div>
 
         {/* RIGHT SIDE */}
-        <div className="flex flex-col items-end gap-4 shrink-0">
+        <div className="flex flex-col items-center md:items-end gap-4 shrink-0">
 
           {/* TOP ICONS ROW */}
           <div className="flex items-center gap-6">

@@ -3,7 +3,11 @@ import ClipPathTitle from "../components/ClipPathTitle";
 import gsap from "gsap";
 import VideoPinSection from "../components/VideoPinSection";
 
+import { useMediaQuery } from "react-responsive";
+
 const BenefitSection = () => {
+  const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
+
   useGSAP(() => {
     const revealTl = gsap.timeline({
       delay: 1,
@@ -89,9 +93,9 @@ const BenefitSection = () => {
       </div>
 
       <div>
-        <VideoPinSection />
+        {!isMobile && <VideoPinSection />}
       </div>
-      
+
     </section>
   );
 };
