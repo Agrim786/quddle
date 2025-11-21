@@ -60,22 +60,11 @@ const TestimonialSection = () => {
 
       // Reset section for mobile layout
       if (section) {
-        gsap.set(section, { marginTop: 0, height: "120vh" });
+        gsap.set(section, { marginTop: 0, height: "100vh" });
       }
 
       // Hide titles fully on mobile
       gsap.set([".first-title", ".sec-title"], { display: "none" });
-
-      // Center the pin-box and move it upward
-     gsap.set(".pin-box", {
-  position: "absolute",
-  top: "50%",
-  left: "50%",
-  xPercent: -50,
-  yPercent: -50,
-  width: "100%",
-  height: "100%",
-});
 
 
       // Clear any tailwind transforms from translation/rotation classes
