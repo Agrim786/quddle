@@ -67,12 +67,16 @@ const TestimonialSection = () => {
       gsap.set([".first-title", ".sec-title"], { display: "none" });
 
       // Center the pin-box and move it upward
-      gsap.set(".pin-box", {
-        position: "relative",
-        width: "100%",
-        height: "100vh",
-        marginTop: "-10vh", // moves stacked cards up cleanly
-      });
+     gsap.set(".pin-box", {
+  position: "absolute",
+  top: "50%",
+  left: "50%",
+  xPercent: -50,
+  yPercent: -50,
+  width: "100%",
+  height: "100%",
+});
+
 
       // Clear any tailwind transforms from translation/rotation classes
       gsap.set(".vd-card", { clearProps: "transform" });
@@ -98,9 +102,9 @@ const TestimonialSection = () => {
           trigger: ".testimonials-section",
           start: "top top",
           end: "+=300%",
-            scrub: true,      // ← direct tie to scroll, no lag, no bounce
-    pin: true,
-    anticipatePin: 1, 
+          scrub: true,      // ← direct tie to scroll, no lag, no bounce
+          pin: true,
+          anticipatePin: 1,
         },
       });
 
@@ -122,7 +126,7 @@ const TestimonialSection = () => {
             yPercent: -25,      // final overlapping position
             scale: 1,
             duration: 0.7,
-            
+
           },
           i * 0.45
         );
