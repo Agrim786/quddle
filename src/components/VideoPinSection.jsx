@@ -36,7 +36,7 @@ const VideoPinSection = () => {
         }}
         className="size-full video-box"
       >
-        <video src="/videos/hero-bg1.mp4" playsInline muted loop autoPlay />
+        <video src="/videos/video.mp4" playsInline muted loop autoPlay />
 
         <div className="abs-center md:scale-100 scale-200">
         </div>

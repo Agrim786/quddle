@@ -102,7 +102,10 @@ const MessageSection = () => {
               className="msg-text-scroll"
             >
               <div className="bg-light-yellow md:pb-5 pb-2 px-4 md:px-5">
-                <h2 className="text-deep-violet text-3xl md:text-6xl">Shop Smart</h2>
+                <h2 className="text-deep-violet text-5xl md:text-7xl lg:text-8xl">
+  Shop Smart
+</h2>
+
               </div>
             </div>
 

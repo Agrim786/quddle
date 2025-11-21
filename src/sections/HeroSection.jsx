@@ -43,6 +43,16 @@ const HeroSection = () => {
           ease: "power2.out",
         },
         "-=0.5"
+      )
+      .from(
+        ".mouse-scroll",
+        {
+          opacity: 0,
+          y: 40,
+          duration: 1,
+          ease: "power2.out",
+        },
+        "-=0.4" // slightly earlier for smoother vibe
       );
 
     const heroTl = gsap.timeline({
@@ -61,19 +71,19 @@ const HeroSection = () => {
     });
   });
 
+
   return (
     <section className="bg-main-bg">
       <div className="hero-container">
         {isTablet ? (
           <>
             {isMobile && (
-             <video
-            src="/videos/hero-bg6.webm"
-            autoPlay
-            muted
-            playsInline
-            className="absolute inset-0 w-full h-full object-cover"
-          />
+              <img
+                src="/images/bg-image.jpg"
+                alt="Background"
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+
             )}
           </>
         ) : (
@@ -104,11 +114,12 @@ const HeroSection = () => {
             Discover more, spend smarter, and turn everyday shopping into something extraordinary, only on Quddle.ai.
           </h2>
         </div>
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce z-30">
-        <div className="w-6 h-10 border-2 border-black rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-black rounded-full mt-2 animate-pulse" />
+        <div className="mouse-scroll absolute bottom-8 left-1/2 transform -translate-x-1/2 z-30">
+          <div className="w-6 h-10 border-2 border-black rounded-full flex justify-center">
+            <div className="w-1 h-3 bg-black rounded-full mt-2 animate-pulse" />
+          </div>
         </div>
-      </div>
+
       </div>
     </section>
   );

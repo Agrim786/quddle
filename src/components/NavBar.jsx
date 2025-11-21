@@ -50,7 +50,7 @@ const NavBar = () => {
           aria-controls="legal-menu"
           ref={legalBtnRef}
           onClick={() => setLegalOpen((p) => !p)}
-          className="transition-colors duration-300 p-2 text-white"
+          className="transition-colors duration-300 p-2 text-black"
         >
           <Menu className="w-7 h-7" />
         </button>

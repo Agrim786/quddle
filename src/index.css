@@ -65,14 +65,15 @@ body::-webkit-scrollbar {
     @apply relative bg-[#000] w-screen h-dvh overflow-hidden;
 
     .hero-content {
-      @apply relative z-10 w-full h-full flex flex-col 2xl:justify-center items-center translate-y-10 2xl:pt-0 md:pt-32 pt-20 px-4 md:px-0;
+  @apply relative z-10 w-full h-full flex flex-col 2xl:justify-center items-center translate-y-10 2xl:pt-0 md:pt-32 pt-32 px-4 md:px-0;
+
 
       .hero-title {
         @apply text-black 2xl:text-[8.5rem] md:text-[6.5rem] text-5xl sm:text-[3.3rem] font-bold uppercase leading-[1.1] md:leading-[9vw] tracking-[-.35vw] 2xl:mb-0 mb-5 text-center;
       }
 
-      .hero-text-scroll {
-        @apply mb-8 rounded-3xl border-[.5vw] border-milk;
+    .hero-text-scroll {
+  @apply mt-10 mb-8 rounded-3xl border-[.5vw] border-milk; 
 
         .hero-subtitle {
           @apply bg-black rounded-3xl;
@@ -118,7 +119,7 @@ body::-webkit-scrollbar {
     }
 
     .msg-text-scroll {
-      @apply rotate-[3deg] 2xl:translate-y-5 -translate-y-5 absolute z-10 border-2 md:border-[.5vw] border-[orange];
+      @apply rotate-[3deg] 2xl:translate-y-5 -translate-y-20 absolute z-10 border-2 md:border-[.5vw] border-[orange];
     }
   }
 
@@ -283,7 +284,7 @@ body::-webkit-scrollbar {
     }
 
     .qr-text {
-      @apply text-white/70 text-sm md:text-base font-medium text-center md:text-left mt-2 md:mt-3;
+      @apply text-white/70 text-xs md:text-base font-medium text-center md:text-left mt-2 md:mt-3;
     }
   }
 }
