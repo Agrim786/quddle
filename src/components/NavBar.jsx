@@ -50,7 +50,7 @@ const NavBar = () => {
           aria-controls="legal-menu"
           ref={legalBtnRef}
           onClick={() => setLegalOpen((p) => !p)}
-          className="transition-colors duration-300 p-2 text-black"
+          className="transition-colors duration-300 p-2 text-white"
         >
           <Menu className="w-7 h-7" />
         </button>
@@ -59,7 +59,7 @@ const NavBar = () => {
         <div
           id="legal-menu"
           ref={legalMenuRef}
-          className={`absolute right-0 top-full mt-2 w-52 bg-[#111827] text-white rounded-2xl shadow-xl z-50 transform transition-all duration-300 origin-top ${
+          className={`absolute right-0 top-full mt-2 w-52 bg-[#FFFDD0] text-black rounded-2xl shadow-xl z-50 transform transition-all duration-300 origin-top ${
             legalOpen
               ? "opacity-100 scale-100"
               : "opacity-0 scale-95 pointer-events-none"
@@ -97,7 +97,7 @@ const NavBar = () => {
               {/* LANGUAGE SUBMENU */}
               <div
                 ref={langMenuRef}
-                className={`absolute top-0 right-full mr-2 w-40 bg-[#1f2937] rounded-xl shadow-xl transition-all duration-300 origin-left ${
+                className={`absolute top-0 right-full mr-2 w-40 bg-[#FFFDD0] rounded-xl shadow-xl transition-all duration-300 origin-left ${
                   langOpen
                     ? "opacity-100 scale-100"
                     : "opacity-0 scale-95 pointer-events-none"
@@ -107,7 +107,7 @@ const NavBar = () => {
                   {["English", "Hindi", "Spanish", "French"].map((lang) => (
                     <button
                       key={lang}
-                      className="w-full px-4 py-2 text-left text-sm hover:bg-white/10 font-serif"
+                      className="w-full px-4 py-2 text-left text-sm hover:bg-white/10 font-serif text-black"
                     >
                       {lang}
                     </button>
