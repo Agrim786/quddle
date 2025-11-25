@@ -75,18 +75,9 @@ const HeroSection = () => {
   return (
     <section className="bg-main-bg">
       <div className="hero-container">
-        {isTablet ? (
-          <>
-            {(isMobile || isTablet) && (
-              <img
-                src="/images/bg-image.jpg"
-                alt="Background"
-                className="absolute inset-0 w-full h-full object-cover"
-              />
 
-            )}
-          </>
-        ) : (
+        {/* ---------- VIDEO FOR DESKTOP ---------- */}
+        {!isTablet && (
           <video
             src="/videos/hero1.mp4"
             autoPlay
@@ -95,25 +86,38 @@ const HeroSection = () => {
             className="absolute inset-0 w-full h-full object-cover"
           />
         )}
-        <div className="hero-content opacity-0">
-          <div className="overflow-hidden">
-            {/* <h1 className="hero-title">THE AI APP</h1> */}
-          </div>
-          {/* <div
-            style={{
-              clipPath: "polygon(50% 0, 50% 0, 50% 100%, 50% 100%)",
-            }}
-            className="hero-text-scroll"
-          >
-            <div className="hero-subtitle">
-              <h1>Quddle.AI </h1>
-            </div>
-          </div> */}
 
-          {/* <h2>
-            Discover more, spend smarter, and turn everyday shopping into something extraordinary, only on Quddle.ai.
-          </h2> */}
-        </div>
+        {/* ---------- IMAGE FOR MOBILE + TABLET ---------- */}
+        {isTablet && (
+          <img
+            src="/images/bg-image.jpg"
+            alt="Background"
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+        )}
+
+        {/* ---------- TEXT ONLY ON MOBILE + TABLET ---------- */}
+        {(isMobile || isTablet) && (
+          <div className="hero-content opacity-0">
+            <div
+              style={{
+                clipPath: "polygon(50% 0, 50% 0, 50% 100%, 50% 100%)",
+              }}
+              className="hero-text-scroll"
+            >
+              <div className="hero-subtitle">
+                <h1>Quddle.AI</h1>
+              </div>
+            </div>
+
+            <h2 className="text-[14px] mt-4 leading-tight px-4">
+              Discover more, spend smarter, and turn everyday shopping into something extraordinary, only on Quddle.ai.
+            </h2>
+
+          </div>
+        )}
+
+        {/* ---------- MOUSE SCROLL ---------- */}
         <div className="mouse-scroll absolute bottom-8 left-1/2 transform -translate-x-1/2 z-30">
           <div className="w-6 h-10 border-2 border-black rounded-full flex justify-center">
             <div className="w-1 h-3 bg-black rounded-full mt-2 animate-pulse" />
