@@ -406,3 +406,34 @@ body::-webkit-scrollbar {
     box-shadow: 0 0 35px rgba(255, 255, 255, 0.45);
   }
 }
+/* GLOSS + RIM EDGE EFFECT */
+.avatar-img {
+  position: relative;
+  isolation: isolate;
+}
+
+.avatar-img::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+
+  /* Main rim gloss */
+  border-radius: 35px;
+  pointer-events: none;
+
+  /* White glossy edge */
+  box-shadow: 
+    0 0 40px rgba(255, 255, 255, 0.45),
+    0 0 80px rgba(255, 255, 255, 0.30),
+    0 0 120px rgba(255, 255, 255, 0.15);
+
+  /* Smooth fade glow */
+  filter: blur(25px);
+}
+
+/* Optional metallic edge */
+.avatar-img.glossy {
+  filter: drop-shadow(0 0 20px rgba(255,255,255,0.35))
+          drop-shadow(0 0 40px rgba(255,255,255,0.2));
+}
