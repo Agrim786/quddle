@@ -70,7 +70,7 @@ export default function DownloadSection() {
           <img
             src="/images/lady2.png"
             alt="AI Avatar Lady"
-            className="avatar-img glossy"
+            className="avatar-img"
           />
         </div>
 
