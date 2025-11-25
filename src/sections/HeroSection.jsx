@@ -88,7 +88,7 @@ const HeroSection = () => {
           </>
         ) : (
           <video
-            src="/videos/hero-bg6.webm"
+            src="/videos/hero.mp4"
             autoPlay
             muted
             playsInline
@@ -99,7 +99,7 @@ const HeroSection = () => {
           <div className="overflow-hidden">
             {/* <h1 className="hero-title">THE AI APP</h1> */}
           </div>
-          <div
+          {/* <div
             style={{
               clipPath: "polygon(50% 0, 50% 0, 50% 100%, 50% 100%)",
             }}
@@ -108,11 +108,11 @@ const HeroSection = () => {
             <div className="hero-subtitle">
               <h1>Quddle.AI </h1>
             </div>
-          </div>
+          </div> */}
 
-          <h2>
+          {/* <h2>
             Discover more, spend smarter, and turn everyday shopping into something extraordinary, only on Quddle.ai.
-          </h2>
+          </h2> */}
         </div>
         <div className="mouse-scroll absolute bottom-8 left-1/2 transform -translate-x-1/2 z-30">
           <div className="w-6 h-10 border-2 border-black rounded-full flex justify-center">
