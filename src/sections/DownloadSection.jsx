@@ -72,6 +72,7 @@ export default function DownloadSection() {
             alt="AI Avatar Lady"
             className="avatar-img"
           />
+          <div className="avatar-shadow"></div>
         </div>
 
         {/* RIGHT TEXT */}

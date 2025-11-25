@@ -243,13 +243,13 @@ body::-webkit-scrollbar {
 
     /* LEFT — Avatar */
     .avatar-left {
-      @apply w-full md:w-1/2 flex justify-center md:justify-start items-end;
+      @apply w-full md:w-1/2 flex justify-center md:justify-start items-end relative;
     }
 
     .avatar-img {
-      @apply w-[70%] sm:w-[60%] md:w-[90%] max-w-md object-contain drop-shadow-[0_0_40px_rgba(255,255,255,0.15)]
-         mt-0 md:mt-16 md:-ml-10;
-    }
+  @apply relative z-10 w-[70%] sm:w-[60%] md:w-[60%] max-w-md object-contain mt-0 md:mt-2 md:-ml-10;
+}
+
 
     /* RIGHT — Text block */
     .avatar-right {
@@ -407,9 +407,30 @@ body::-webkit-scrollbar {
   }
 }
 
+.avatar-shadow {
+  position: absolute;
+  bottom: -5%;              /* slightly below feet */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70%;
+  height: 60px;
+
+  background: radial-gradient(
+    ellipse at center,
+    rgba(29, 28, 28, 0.4) 0%,
+    rgba(86, 83, 83, 0.18) 40%,
+    rgba(255, 255, 255, 0) 100%
+  );
+
+  filter: blur(22px);
+  opacity: 0.95;
+  z-index: 0;               /* BELOW img (z-10), ABOVE bg */
+  pointer-events: none;
+}
+
 /* Bottom blend effect */
 .avatar-img {
   position: relative;
-  mask-image: linear-gradient(to bottom, rgb(0, 0, 0) 70%, transparent 100%);
-  -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
 }
