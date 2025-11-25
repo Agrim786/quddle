@@ -77,7 +77,7 @@ const HeroSection = () => {
       <div className="hero-container">
         {isTablet ? (
           <>
-            {isMobile && (
+            {(isMobile || isTablet) && (
               <img
                 src="/images/bg-image.jpg"
                 alt="Background"

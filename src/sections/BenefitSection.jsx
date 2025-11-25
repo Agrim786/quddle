@@ -1,14 +1,55 @@
 import { useGSAP } from "@gsap/react";
 import ClipPathTitle from "../components/ClipPathTitle";
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import VideoPinSection from "../components/VideoPinSection";
-
 import { useMediaQuery } from "react-responsive";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const BenefitSection = () => {
   const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
+  const isTablet = useMediaQuery({ query: "(max-width: 1024px)" });
+
 
   useGSAP(() => {
+    /* ------------------- MOBILE: INSTANT REVEAL ------------------- */
+    if (isMobile) {
+      gsap.to(".benefit-section .first-title", {
+        opacity: 1,
+        clipPath: "polygon(0% 0%, 100% 0, 100% 100%, 0% 100%)",
+        duration: 0.6,
+        ease: "circ.out",
+      });
+
+      gsap.to(".benefit-section .second-title", {
+        opacity: 1,
+        clipPath: "polygon(0% 0%, 100% 0, 100% 100%, 0% 100%)",
+        duration: 0.6,
+        delay: 0.15,
+        ease: "circ.out",
+      });
+
+      gsap.to(".benefit-section .third-title", {
+        opacity: 1,
+        clipPath: "polygon(0% 0%, 100% 0, 100% 100%, 0% 100%)",
+        duration: 0.6,
+        delay: 0.3,
+        ease: "circ.out",
+      });
+
+      gsap.to(".benefit-section .fourth-title", {
+        opacity: 1,
+        clipPath: "polygon(0% 0%, 100% 0, 100% 100%, 0% 100%)",
+        duration: 0.6,
+        delay: 0.45,
+        ease: "circ.out",
+      });
+
+      return; // STOP here (avoid ScrollTrigger on mobile)
+    }
+
+    /* ------------------- DESKTOP: SCROLL REVEAL ------------------- */
     const revealTl = gsap.timeline({
       delay: 1,
       scrollTrigger: {
@@ -55,7 +96,7 @@ const BenefitSection = () => {
             Explore Why Thousands Choose
           </p>
 
-          <div className="mt-20 col-center">
+          <div className="mt-25 col-center">
             <ClipPathTitle
               title={"Smart Shopping"}
               color={"#faeade"}
@@ -92,10 +133,7 @@ const BenefitSection = () => {
         </div>
       </div>
 
-      <div>
-        {!isMobile && <VideoPinSection />}
-      </div>
-
+      <div>{!(isMobile || isTablet) && <VideoPinSection />}</div>
     </section>
   );
 };
