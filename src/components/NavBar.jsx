@@ -1,5 +1,22 @@
 import { useState, useRef, useEffect } from "react";
 import { Menu } from "lucide-react";
+import { Link } from "react-router-dom";
+
+
+// =======================================
+// 🚀 SCALABLE MENU CONFIG
+// =======================================
+const MENU_ITEMS = [
+  { label: "About Us", link: "/about" },
+  { label: "Advertising", link: "/advertising" },
+  { label: "Careers", link: "/careers" },
+  { label: "Policy", link: "/policy" },
+  { label: "Data Room", link: "/data-room" },
+  { label: "Manage Cookies", link: "/cookies" },
+];
+
+const LANGUAGES = ["English", "Hindi", "Spanish", "French"];
+
 
 const NavBar = () => {
   const [legalOpen, setLegalOpen] = useState(false);
@@ -9,10 +26,9 @@ const NavBar = () => {
   const legalBtnRef = useRef(null);
   const langMenuRef = useRef(null);
 
-  // ✅ CLOSE WHEN CLICKING OUTSIDE
+  // CLOSE ON CLICK OUTSIDE
   useEffect(() => {
     const handleClickOutside = (e) => {
-      // If main menu is OPEN and click is outside → close it
       if (
         legalOpen &&
         legalMenuRef.current &&
@@ -20,10 +36,9 @@ const NavBar = () => {
         !legalBtnRef.current.contains(e.target)
       ) {
         setLegalOpen(false);
-        setLangOpen(false); // also close language submenu
+        setLangOpen(false);
       }
 
-      // If language menu is OPEN and click outside → close it
       if (
         langOpen &&
         langMenuRef.current &&
@@ -39,7 +54,7 @@ const NavBar = () => {
 
   return (
     <nav className="fixed top-0 left-0 z-50 w-full flex items-center justify-between md:p-9 p-3">
-
+      
       {/* Logo */}
       <img src="/images/logo2.gif" alt="nav-logo" className="md:w-16 w-12" />
 
@@ -67,23 +82,26 @@ const NavBar = () => {
         >
           <div className="py-2">
 
-            {/* Normal buttons */}
-            {[
-              "Blogs",
-              "About Us",
-              "Advertising",
-              "Careers",
-              "Policy",
-              "Data Room",
-              "Manage Cookies",
-            ].map((item) => (
-              <button
-                key={item}
-                className="w-full px-4 py-2 text-left text-base hover:bg-white/10 transition-colors font-serif"
-              >
-                {item}
-              </button>
-            ))}
+            {/* MENU ITEMS */}
+            {MENU_ITEMS.map((item) =>
+              item.link ? (
+                <Link
+                  key={item.label}
+                  to={item.link}
+                  className="w-full block px-4 py-2 text-left text-base hover:bg-white/10 transition-colors font-serif"
+                  onClick={() => setLegalOpen(false)}
+                >
+                  {item.label}
+                </Link>
+              ) : (
+                <button
+                  key={item.label}
+                  className="w-full px-4 py-2 text-left text-base hover:bg-white/10 transition-colors font-serif"
+                >
+                  {item.label}
+                </button>
+              )
+            )}
 
             {/* LANGUAGE OPTION */}
             <div className="relative">
@@ -104,7 +122,7 @@ const NavBar = () => {
                 }`}
               >
                 <div className="py-2">
-                  {["English", "Hindi", "Spanish", "French"].map((lang) => (
+                  {LANGUAGES.map((lang) => (
                     <button
                       key={lang}
                       className="w-full px-4 py-2 text-left text-sm hover:bg-white/10 font-serif text-black"
