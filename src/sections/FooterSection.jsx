@@ -4,8 +4,8 @@ const FooterSection = () => {
   return (
     <footer className="w-full bg-[#000000] text-white py-12 px-6 md:px-20">
 
-      {/* MAIN FLEX — LEFT | CENTER NUMBERS | RIGHT */}
-      {/* MAIN FLEX — LEFT | CENTER NUMBERS | RIGHT */}
+      {/* MAIN FLEX - LEFT | CENTER NUMBERS | RIGHT */}
+      {/* MAIN FLEX - LEFT | CENTER NUMBERS | RIGHT */}
       <div className="flex flex-col md:flex-row items-center md:justify-between w-full gap-10 md:gap-6">
 
         {/* LEFT SIDE */}
@@ -63,14 +63,14 @@ const FooterSection = () => {
 
           {/* TOP ICONS ROW */}
           <div className="flex items-center gap-6">
-            <a href="#">
+            <a href="mailto:tech@quddle.ai">
               <img
                 src="https://cdn.jsdelivr.net/npm/heroicons@2.0.18/24/outline/envelope.svg"
                 className="w-6 invert opacity-90"
               />
             </a>
 
-            <a href="#">
+            <a href="https://x.com/quddleai" target="_blank">
               <img
                 src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/x.svg"
                 className="w-6 invert opacity-90"
@@ -78,7 +78,7 @@ const FooterSection = () => {
               />
             </a>
 
-            <a href="#">
+            <a href="https://linkedin.com/company/quddle-ai" target="_blank">
               <img
                 src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg"
                 className="w-6 invert opacity-90"
@@ -89,7 +89,7 @@ const FooterSection = () => {
 
           {/* BOTTOM ICONS ROW */}
           <div className="flex items-center gap-6">
-            <a href="#">
+            <a href="https://youtube.com/@quddleai" target="_blank">
               <img
                 src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/youtube.svg"
                 className="w-6 invert opacity-90"
@@ -97,7 +97,7 @@ const FooterSection = () => {
               />
             </a>
 
-            <a href="#">
+            <a href="https://instagram.com/quddleai" target="_blank">
               <img
                 src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg"
                 className="w-6 invert opacity-90"
@@ -105,7 +105,7 @@ const FooterSection = () => {
               />
             </a>
 
-            <a href="#">
+            <a href="https://facebook.com/quddleai" target="_blank">
               <img
                 src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg"
                 className="w-6 invert opacity-90"

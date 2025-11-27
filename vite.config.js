@@ -6,12 +6,22 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineConfig({
   plugins: [react(), tailwindcss()],
   server: {
-    host: true,      // 👈 allows access from your local IP (0.0.0.0)
-    port: 5173,      // 👈 optional: default Vite port
-    open: false,     // 👈 prevents auto-opening browser (optional)
+    host: true,      // allow local network access
+    port: 5173,
+    open: false,
+
+    // ⭐ PROXY FIX — CRITICAL FOR COOKIE TO WORK
+    proxy: {
+      "/api": {
+        target: "http://localhost:5000", // your backend
+        changeOrigin: true,
+        secure: false,
+      },
+    },
   },
+
   preview: {
-    host: true,      // 👈 same for `vite preview`
-    port: 4173,      // 👈 default preview port
+    host: true,
+    port: 4173,
   },
 });

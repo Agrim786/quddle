@@ -6,7 +6,7 @@ import gsap from "gsap";
 import MessageSection from "./sections/MessageSection";
 import { useGSAP } from "@gsap/react";
 import DownloadSection from "./sections/DownloadSection";
-import BenefitSection from "./sections/BenefitSection";
+import BarsSection from "./sections/BarsSection";
 import TestimonialSection from "./sections/TestimonialSection";
 import FooterSection from "./sections/FooterSection";
 import About from "./pages/About";
@@ -14,6 +14,10 @@ import Advertising from "./pages/Advertising";
 import Careers from "./pages/Careers";
 import Policy from "./pages/Policy";
 import Cookies from "./pages/Cookies";
+import DataRoom from "./pages/DataRoom";
+
+
+
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
@@ -29,12 +33,12 @@ const App = () => {
 
   return (
     <Router>
+      <NavBar />
       {/* GLOBAL SMOOTH WRAPPER */}
       <div id="smooth-wrapper">
         <div id="smooth-content">
 
           <main>
-            <NavBar />
 
             <Routes>
               {/* Home */}
@@ -45,7 +49,7 @@ const App = () => {
                     <HeroSection />
                     <MessageSection />
                     <DownloadSection />
-                    <BenefitSection />
+                    <BarsSection />
                     <TestimonialSection />
                     <FooterSection />
                   </>
@@ -58,6 +62,7 @@ const App = () => {
               <Route path="/careers" element={<Careers />} />
               <Route path="/policy" element={<Policy />} />
               <Route path="/cookies" element={<Cookies />} />
+              <Route path="/data-room" element={<DataRoom />} />
             </Routes>
           </main>
 

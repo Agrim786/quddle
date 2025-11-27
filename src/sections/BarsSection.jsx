@@ -7,7 +7,7 @@ import { useMediaQuery } from "react-responsive";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const BenefitSection = () => {
+const BarsSection = () => {
   const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
   const isTablet = useMediaQuery({ query: "(max-width: 1024px)" });
 
@@ -138,4 +138,4 @@ const BenefitSection = () => {
   );
 };
 
-export default BenefitSection;
+export default BarsSection;

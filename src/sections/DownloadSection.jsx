@@ -88,7 +88,7 @@ export default function DownloadSection() {
           </h1>
 
           <p className="avatar-subtitle move-up">
-            Stream, Shop, Save, Earn — everything built into a single powerful
+            Stream, Shop, Save, Earn - everything built into a single powerful
             AI-driven experience.
           </p>
 

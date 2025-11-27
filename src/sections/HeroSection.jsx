@@ -101,18 +101,18 @@ const HeroSection = () => {
         {/* ---------- TEXT ONLY ON MOBILE + TABLET ---------- */}
         {(isMobile || isTablet) && (
           <div className="hero-content opacity-0">
-            <div
+            {/* <div
               style={{
                 clipPath: "polygon(50% 0, 50% 0, 50% 100%, 50% 100%)",
               }}
               className="hero-text-scroll"
             >
-              {/* <div className="hero-subtitle">
+              <div className="hero-subtitle">
                 <h1>Quddle.AI</h1>
-              </div> */}
+              </div>
             </div>
 
-            {/* <h2 className="text-[14px] mt-4 leading-tight px-4">
+            <h2 className="text-[14px] mt-4 leading-tight px-4">
               Discover more, spend smarter, and turn everyday shopping into something extraordinary, only on Quddle.ai.
             </h2> */}
 

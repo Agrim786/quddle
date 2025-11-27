@@ -246,9 +246,10 @@ body::-webkit-scrollbar {
       @apply w-full md:w-1/2 flex justify-center md:justify-start items-end relative;
     }
 
-    .avatar-img {
-  @apply relative z-10 w-[70%] sm:w-[60%] md:w-[60%] max-w-md object-contain mt-0 md:mt-2 md:-ml-10;
+   .avatar-img {
+  @apply relative z-10 w-[70%] sm:w-[60%] max-w-md object-contain mt-0;
 }
+
 
 
     /* RIGHT — Text block */
@@ -433,4 +434,50 @@ body::-webkit-scrollbar {
   position: relative;
   mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
   -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+}
+
+
+/* --------------------------------------------------
+   FINAL TABLET FIX — MUST BE LAST IN THE FILE
+-------------------------------------------------- */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+  .ai-avatar-section .avatar-img {
+    width: 75% !important;          
+    max-width: 285px !important;
+    margin-left: 32px !important;
+    margin-top: 0 !important;
+  }
+
+  .ai-avatar-section .avatar-left {
+    align-items: flex-end !important;
+  }
+
+  .ai-avatar-section .avatar-shadow {
+    width: 50% !important;
+    bottom: -1% !important;
+    filter: blur(18px) !important;
+  }
+}
+
+
+/* Smaller Tablets Fix — keeps same design but scaled */
+@media (min-width: 700px) and (max-width: 768px) {
+
+  .ai-avatar-section .avatar-img {
+    width: 78% !important;        /* slightly larger because screen is smaller */
+    max-width: 250px !important;
+    margin-left: 18px !important; /* reduced offset */
+    margin-top: 4px !important;
+  }
+
+  .ai-avatar-section .avatar-left {
+    align-items: flex-end !important;
+  }
+
+  .ai-avatar-section .avatar-shadow {
+    width: 55% !important;
+    bottom: -1% !important;
+    filter: blur(16px) !important;
+  }
 }

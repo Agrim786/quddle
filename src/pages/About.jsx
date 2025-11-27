@@ -1,6 +1,10 @@
 export default function About() {
     return (
-        <div className="px-6 py-16 max-w-3xl mx-auto text-white">
+        <div className="w-full min-h-screen" style={{
+  background: "radial-gradient(circle at center, #f4ca7dff 0%, #dd8f2f 60%, #ce8a37ff 100%)"
+}}
+>
+        <div className="px-6 py-16 max-w-3xl mx-auto text-black">
 
             {/* Title */}
             <h1 className="text-4xl font-bold mb-8 text-center">
@@ -9,7 +13,7 @@ export default function About() {
 
             {/* Paragraph 1 */}
             <p className="mb-6 opacity-90 leading-relaxed">
-                Welcome to Quddle.ai — the next generation of social e-commerce. We bring together
+                Welcome to Quddle.ai - the next generation of social e-commerce. We bring together
                 shopping, entertainment, and connection into one powerful platform designed for the
                 digital age.
             </p>
@@ -19,7 +23,7 @@ export default function About() {
                 Quddle.ai is built for creators, businesses, and everyday users who want more than a
                 marketplace. Here, social interaction meets smart commerce. Whether you’re sharing
                 short reels, going live to showcase your products, connecting through private chat
-                rooms, or discovering local services and deals — Quddle.ai makes digital engagement
+                rooms, or discovering local services and deals. Quddle.ai makes digital engagement
                 human, exciting, and profitable.
             </p>
 
@@ -41,17 +45,18 @@ export default function About() {
             <p className="mt-10 mb-6 opacity-90 leading-relaxed">
                 At Quddle.ai, innovation meets community. We believe in empowering users and small
                 businesses with technology that enhances the way people shop, sell, and interact
-                online. Our mission is to redefine how digital commerce feels — where every
+                online. Our mission is to redefine how digital commerce feels - where every
                 connection has value, and every moment creates opportunity.
             </p>
 
             {/* Final Line */}
             <p className="text-lg font-semibold text-center mt-12 opacity-95">
-                Join Quddle.ai and experience the future of social e-commerce —
+                Join Quddle.ai and experience the future of social e-commerce -
                 <br />
                 smarter, more connected, and powered by AI.
             </p>
 
+        </div>
         </div>
     );
 }

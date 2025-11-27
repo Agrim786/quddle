@@ -15,7 +15,7 @@ const MENU_ITEMS = [
   { label: "Manage Cookies", link: "/cookies" },
 ];
 
-const LANGUAGES = ["English", "Hindi", "Spanish", "French"];
+const LANGUAGES = ["English", "Hindi", "Spanish", "French", "Arabic"];
 
 
 const NavBar = () => {
@@ -54,9 +54,16 @@ const NavBar = () => {
 
   return (
     <nav className="fixed top-0 left-0 z-50 w-full flex items-center justify-between md:p-9 p-3">
-      
+
       {/* Logo */}
-      <img src="/images/logo2.gif" alt="nav-logo" className="md:w-16 w-12" />
+      <Link to="/">
+        <img
+          src="/images/logo2.gif"
+          alt="nav-logo"
+          className="md:w-16 w-12 cursor-pointer"
+        />
+      </Link>
+
 
       {/* DROPDOWN */}
       <div className="relative">
@@ -74,11 +81,10 @@ const NavBar = () => {
         <div
           id="legal-menu"
           ref={legalMenuRef}
-          className={`absolute right-0 top-full mt-2 w-52 bg-[#FFFDD0] text-black rounded-2xl shadow-xl z-50 transform transition-all duration-300 origin-top ${
-            legalOpen
+          className={`absolute right-0 top-full mt-2 w-52 bg-[#FFFDD0] text-black rounded-2xl shadow-xl z-50 transform transition-all duration-300 origin-top ${legalOpen
               ? "opacity-100 scale-100"
               : "opacity-0 scale-95 pointer-events-none"
-          }`}
+            }`}
         >
           <div className="py-2">
 
@@ -109,17 +115,16 @@ const NavBar = () => {
                 onClick={() => setLangOpen((p) => !p)}
                 className="w-full px-4 py-2 text-left text-base hover:bg-white/10 transition-colors font-serif flex justify-between"
               >
-                Language <span className="opacity-70 text-xs">▶</span>
+                Language <span className="opacity-70 text-xs">→</span>
               </button>
 
               {/* LANGUAGE SUBMENU */}
               <div
                 ref={langMenuRef}
-                className={`absolute top-0 right-full mr-2 w-40 bg-[#FFFDD0] rounded-xl shadow-xl transition-all duration-300 origin-left ${
-                  langOpen
+                className={`absolute top-0 right-full mr-2 w-40 bg-[#FFFDD0] rounded-xl shadow-xl transition-all duration-300 origin-left ${langOpen
                     ? "opacity-100 scale-100"
                     : "opacity-0 scale-95 pointer-events-none"
-                }`}
+                  }`}
               >
                 <div className="py-2">
                   {LANGUAGES.map((lang) => (
