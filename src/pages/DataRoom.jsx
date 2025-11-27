@@ -22,16 +22,26 @@ export default function DataRoom() {
         const data = await res.json();
         if (data.success) {
             setAuthorized(true);
+            sessionStorage.setItem("dataRoomAuth", "yes");
         } else {
             alert("Wrong password");
         }
+
     };
 
     const downloadFile = async (fileName) => {
-        const res = await fetch(`${import.meta.env.VITE_API_URL}/files/${fileName}`, {
-            method: "GET",
-            credentials: "include",
-        });
+        const token = sessionStorage.getItem("dataRoomAuth");
+
+        const res = await fetch(
+            `${import.meta.env.VITE_API_URL}/api/files/${encodeURIComponent(fileName)}`,
+            {
+                method: "GET",
+                credentials: "include",          // still send cookie if browser allows it
+                headers: {
+                    "X-DataRoom-Auth": token || "", // header fallback for browsers blocking cookies
+                },
+            }
+        );
 
         if (!res.ok) {
             alert("Unauthorized");
@@ -46,6 +56,7 @@ export default function DataRoom() {
         a.download = fileName;
         a.click();
     };
+
 
 
     /* ================= PASSWORD SCREEN ================= */
