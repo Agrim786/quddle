@@ -89,9 +89,11 @@ const HeroSection = () => {
 
         {/* ---------- IMAGE FOR MOBILE + TABLET ---------- */}
         {isTablet && (
-          <img
-            src="/images/bg-image.jpg"
-            alt="Background"
+          <video
+            src="/videos/hero1.mp4"
+            autoPlay
+            muted
+            playsInline
             className="absolute inset-0 w-full h-full object-cover"
           />
         )}
@@ -105,14 +107,14 @@ const HeroSection = () => {
               }}
               className="hero-text-scroll"
             >
-              <div className="hero-subtitle">
+              {/* <div className="hero-subtitle">
                 <h1>Quddle.AI</h1>
-              </div>
+              </div> */}
             </div>
 
-            <h2 className="text-[14px] mt-4 leading-tight px-4">
+            {/* <h2 className="text-[14px] mt-4 leading-tight px-4">
               Discover more, spend smarter, and turn everyday shopping into something extraordinary, only on Quddle.ai.
-            </h2>
+            </h2> */}
 
           </div>
         )}
