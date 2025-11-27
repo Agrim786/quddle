@@ -33,7 +33,7 @@ export default function DataRoom() {
         const token = sessionStorage.getItem("dataRoomAuth");
 
         const res = await fetch(
-            `${import.meta.env.VITE_API_URL}/api/files/${encodeURIComponent(fileName)}`,
+            `${import.meta.env.VITE_API_URL}/files/${encodeURIComponent(fileName)}`,
             {
                 method: "GET",
                 credentials: "include",          // still send cookie if browser allows it
