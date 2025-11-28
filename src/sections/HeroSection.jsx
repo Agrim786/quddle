@@ -89,13 +89,10 @@ const HeroSection = () => {
 
         {/* ---------- IMAGE FOR MOBILE + TABLET ---------- */}
         {isTablet && (
-          <video
-            src="/videos/video3.mp4"
-            autoPlay
-            muted
-            playsInline
-            className="absolute inset-0 w-full h-full object-cover"
-          />
+         <img
+                src="/images/bg.jpg"
+                className="absolute size-full object-cover"
+              />
         )}
 
         {/* ---------- TEXT ONLY ON MOBILE + TABLET ---------- */}
