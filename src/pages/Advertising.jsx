@@ -1,7 +1,7 @@
 export default function Advertising() {
     return (
         <div
-            className="w-full min-h-screen text-white bg-white/10"
+            className="w-full min-h-screen text-white bg-white/20"
         >
             <div className="px-6 py-16 max-w-3xl mx-auto text-white">
 

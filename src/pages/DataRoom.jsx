@@ -62,7 +62,7 @@ export default function DataRoom() {
     /* ================= PASSWORD SCREEN ================= */
     if (!authorized) {
         return (
-            <div className="min-h-screen flex items-center justify-center bg-white/10 px-6">
+            <div className="min-h-screen flex items-center justify-center bg-white/20 px-6">
                 <div className="bg-black backdrop-blur-2xl p-10 rounded-3xl border border-black max-w-sm w-full shadow-2xl">
                     <h1 className="text-3xl font-semibold mb-6 text-center text-white">
                         Enter Data Room

@@ -90,7 +90,7 @@ const HeroSection = () => {
         {/* ---------- IMAGE FOR MOBILE + TABLET ---------- */}
         {isTablet && (
           <video
-            src="/videos/hero1.mp4"
+            src="/videos/video3.mp4"
             autoPlay
             muted
             playsInline
