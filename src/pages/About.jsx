@@ -1,10 +1,7 @@
 export default function About() {
     return (
-        <div className="w-full min-h-screen" style={{
-  background: "radial-gradient(circle at center, #f4ca7dff 0%, #dd8f2f 60%, #ce8a37ff 100%)"
-}}
->
-        <div className="px-6 py-16 max-w-3xl mx-auto text-black">
+        <div className="w-full min-h-screen bg-white/10">
+        <div className="px-6 py-16 max-w-3xl mx-auto text-white">
 
             {/* Title */}
             <h1 className="text-4xl font-bold mb-8 text-center">

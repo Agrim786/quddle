@@ -1,12 +1,9 @@
 export default function Careers() {
     return (
         <div
-            className="w-full min-h-screen text-white"
-            style={{
-                background: "linear-gradient(135deg, #aac86aff 0%, #c4e670 30%, #899f3bff 100%)"
-            }}
+            className="w-full min-h-screen text-white bg-white/10"
         >
-            <div className="px-6 py-16 max-w-3xl mx-auto text-black">
+            <div className="px-6 py-16 max-w-3xl mx-auto text-white">
 
                 {/* Title */}
                 <h1 className="text-4xl font-bold mb-8 text-center">
