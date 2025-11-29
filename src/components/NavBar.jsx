@@ -16,6 +16,7 @@ const MENU_ITEMS = [
 ];
 
 const LANGUAGES = ["English", "Hindi", "Spanish", "French", "Arabic"];
+const CONTROL_HUB = ["Finance", "HR", "Marketing"];
 
 
 const NavBar = () => {
@@ -25,6 +26,8 @@ const NavBar = () => {
   const legalMenuRef = useRef(null);
   const legalBtnRef = useRef(null);
   const langMenuRef = useRef(null);
+  const [hubOpen, setHubOpen] = useState(false);
+  const hubMenuRef = useRef(null);
 
   // CLOSE ON CLICK OUTSIDE
   useEffect(() => {
@@ -82,8 +85,8 @@ const NavBar = () => {
           id="legal-menu"
           ref={legalMenuRef}
           className={`absolute right-0 top-full mt-2 w-52 bg-[#FFFDD0] text-black rounded-2xl shadow-xl z-50 transform transition-all duration-300 origin-top ${legalOpen
-              ? "opacity-100 scale-100"
-              : "opacity-0 scale-95 pointer-events-none"
+            ? "opacity-100 scale-100"
+            : "opacity-0 scale-95 pointer-events-none"
             }`}
         >
           <div className="py-2">
@@ -109,6 +112,35 @@ const NavBar = () => {
               )
             )}
 
+            {/* CONTROL HUB OPTION */}
+            <div className="relative">
+              <button
+                onClick={() => setHubOpen((p) => !p)}
+                className="w-full px-4 py-2 text-left text-base hover:bg-white/10 transition-colors font-serif flex justify-between"
+              >
+                Control Hub <span className="opacity-70 text-xs">→</span>
+              </button>
+
+              {/* CONTROL HUB SUBMENU */}
+              <div
+                ref={hubMenuRef}
+                className={`absolute top-0 right-full mr-2 w-40 bg-[#FFFDD0] rounded-xl shadow-xl transition-all duration-300 origin-left ${hubOpen ? "opacity-100 scale-100" : "opacity-0 scale-95 pointer-events-none"
+                  }`}
+              >
+                <div className="py-2">
+                  {CONTROL_HUB.map((item) => (
+                    <button
+                      key={item}
+                      className="w-full px-4 py-2 text-left text-sm hover:bg-white/10 font-serif text-black"
+                    >
+                      {item}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+
             {/* LANGUAGE OPTION */}
             <div className="relative">
               <button
@@ -122,8 +154,8 @@ const NavBar = () => {
               <div
                 ref={langMenuRef}
                 className={`absolute top-0 right-full mr-2 w-40 bg-[#FFFDD0] rounded-xl shadow-xl transition-all duration-300 origin-left ${langOpen
-                    ? "opacity-100 scale-100"
-                    : "opacity-0 scale-95 pointer-events-none"
+                  ? "opacity-100 scale-100"
+                  : "opacity-0 scale-95 pointer-events-none"
                   }`}
               >
                 <div className="py-2">

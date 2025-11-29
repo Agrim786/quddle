@@ -4,13 +4,9 @@ import { SplitText } from "gsap/all";
 import { useMediaQuery } from "react-responsive";
 
 const HeroSection = () => {
-  const isMobile = useMediaQuery({
-    query: "(max-width: 768px)",
-  });
+  const isMobile = useMediaQuery({ query: "(max-width: 768px)" });        // < 768
+  const isTablet = useMediaQuery({ query: "(min-width: 769px) and (max-width: 1024px)" }); // 769–1024
 
-  const isTablet = useMediaQuery({
-    query: "(max-width: 1024px)",
-  });
 
   useGSAP(() => {
     const titleSplit = SplitText.create(".hero-title", {
@@ -77,7 +73,8 @@ const HeroSection = () => {
       <div className="hero-container">
 
         {/* ---------- VIDEO FOR DESKTOP ---------- */}
-        {!isTablet && (
+        {/* ---------- DESKTOP VIDEO (>1024px) ---------- */}
+        {!isMobile && !isTablet && (
           <video
             src="/videos/hero1.mp4"
             autoPlay
@@ -87,13 +84,25 @@ const HeroSection = () => {
           />
         )}
 
-        {/* ---------- IMAGE FOR MOBILE + TABLET ---------- */}
+        {/* ---------- TABLET VIDEO (769px–1024px) ---------- */}
         {isTablet && (
-         <img
-                src="/images/bg.jpg"
-                className="absolute size-full object-cover"
-              />
+          <video
+            src="/videos/tablet.mp4"
+            autoPlay
+            muted
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover"
+          />
         )}
+
+        {/* ---------- MOBILE IMAGE (<768px) ---------- */}
+        {isMobile && (
+          <img
+            src="/images/bg.jpg"
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+        )}
+
 
         {/* ---------- TEXT ONLY ON MOBILE + TABLET ---------- */}
         {(isMobile || isTablet) && (
