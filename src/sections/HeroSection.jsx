@@ -87,7 +87,7 @@ const HeroSection = () => {
         {/* ---------- TABLET VIDEO (769px–1024px) ---------- */}
         {isTablet && (
           <video
-            src="/videos/tablet.mp4"
+            src="/videos/hero1.mp4"
             autoPlay
             muted
             playsInline
